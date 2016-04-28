@@ -5,3 +5,8 @@ npm-debug.log
 */.DS_Store
 */*/.DS_Store
 *.sh
+
+*.name
+.idea/encodings.xml
+*.xml
+.idea/wenlihui.github.io.iml
