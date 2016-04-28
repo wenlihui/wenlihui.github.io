@@ -2,7 +2,7 @@
 layout:     post
 title:      "Hello 2016"
 subtitle:   " \"Hello World, Hello Blog\""
-date:       2016-04-28 14:29:00
+date:       2016-04-27 15:00:00
 author:     "Wenlh"
 header-img: "img/myson.jpg"
 catalog: true
@@ -13,6 +13,4 @@ tags:
 Wenlh 的 Blog 就这么开通了。
 
 2016年,开始学习的一年,弄个博客记录一下自己学过的东西
-—— Wenlh 后记于 2016.04
-
-
+—— Wenlh
