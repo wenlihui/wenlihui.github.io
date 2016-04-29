@@ -10,7 +10,46 @@ tags:
     - PHP
 ---
 
-## PHP基本语法学习记录
+# PHP基本语法学习记录
+## 一 [yufa]: http://www.w3school.com.cn/php/php_syntax.asp "语法"
+1. PHP 脚本以 <?php 开头，以 ?> 结尾
+```php
+    <?php
+      // 此处是 PHP 代码
+    ?>
+```
+2. PHP 文件的默认文件扩展名是 ".php"
+3. PHP 文件通常包含 HTML 标签以及一些 PHP 脚本代码
+```php
+    <!DOCTYPE html>
+        <html>
+            <body>
 
+                <h1>我的第一张 PHP 页面</h1>
+
+                <?php
+                     echo "Hello World!";
+                ?>
+
+            </body>
+    </html>
+```
+4. PHP语句以分号结尾
+5. PHP中函数、类和关键词大小写不敏感, 变量大小写敏感
+6. PHP中的注释
+```php
+    <?php
+        $a = '我不是注释';
+      // 这是单行注释
+
+      # 这也是单行注释
+
+     /*
+        这是多行注释块
+        这是多行注释块
+        这是多行注释块
+     */
+    ?>
+```
 
 —— Wenlh
