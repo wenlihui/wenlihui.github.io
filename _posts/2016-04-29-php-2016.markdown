@@ -11,7 +11,7 @@ tags:
 ---
 
 # PHP基本语法学习记录
-## 一 [yufa]: http://www.w3school.com.cn/php/php_syntax.asp "语法"
+## 一 语法
 1. PHP 脚本以 <?php 开头，以 ?> 结尾
 ```php
     <?php
