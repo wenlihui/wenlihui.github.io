@@ -85,6 +85,9 @@ friends: [
         title: "RubyChina",
         href: "https://ruby-china.org/"
     },{
+        title: "W3CSchool-PHP",
+        href: "http://www.w3school.com.cn/php/php_superglobals.asp"
+    },{
         title: "XDITE的博客",
         href: "http://blog.xdite.net/categories/Rails/"
     }
