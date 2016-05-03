@@ -2,7 +2,7 @@
 layout:     post
 title:      "PHP表单"
 subtitle:   " \"PHP基础语法学习记录\""
-date:       2016-04-28 15:00:00
+date:       2016-05-03 8:00:00
 author:     "Wenlh"
 header-img: "img/myson.jpg"
 catalog: true

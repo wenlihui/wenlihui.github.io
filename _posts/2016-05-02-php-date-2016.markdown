@@ -1,0 +1,72 @@
+---
+layout:     post
+title:      "PHP表单"
+subtitle:   " \"PHP日期函数学习记录\""
+date:       2016-05-03 15:00:00
+author:     "Wenlh"
+header-img: "img/myson.jpg"
+catalog: true
+tags:
+    - PHP
+---
+
+## [PHP日期函数学习记录](http://www.w3school.com.cn/php/php_date.asp)  
+
+PHP Date() 函数把时间戳格式化为更易读的日期和时间,date(format,timestamp)
+
+参数|	描述
+----|----
+forma|t	必需。规定时间戳的格式。
+timestamp|	可选。规定时间戳。默认是当前时间和日期。
+
+* d - 表示月里的某天（01-31）
+* m - 表示月（01-12）
+* Y - 表示年（四位数）
+* 1 - 表示周里的某天
+* h - 带有首位零的 12 小时小时格式
+* i - 带有首位零的分钟
+* s - 带有首位零的秒（00 -59）
+* a - 小写的午前和午后（am 或 pm）
+
+* 设置时区
+
+```php
+<?php
+	date_default_timezone_set("Asia/Shanghai");
+	echo "当前时间是 " . date("h:i:sa");
+?>
+```
+* 创建时间
+
+```php
+<?php
+	$d=mktime(9, 12, 31, 6, 10, 2015);
+	echo "创建日期是 " . date("Y-m-d h:i:sa", $d);
+?>
+```
+
+*  strtotime() ,strtotime(time,now)
+** 把人类可读时间转换为unix时间
+** 时间计算,now默认为当前时间
+
+```php
+<?php
+	$a = strtotime("now");
+	$b = strtotime("3 October 2005");
+	$c = strtotime("+5 hours");
+	$d = strtotime("+1 week");
+	$e = strtotime("+1 week 3 days 7 hours 5 seconds");
+	$f = strtotime("next Monday");
+	$g = strtotime("last Sunday");
+	$h = strtotime("-1 day);
+	echo "创建日期是 " . date("Y-m-d h:i:sa", $a);
+	echo "创建日期是 " . date("Y-m-d h:i:sa", $b);
+	echo "创建日期是 " . date("Y-m-d h:i:sa", $c);
+	echo "创建日期是 " . date("Y-m-d h:i:sa", $d);
+	echo "创建日期是 " . date("Y-m-d h:i:sa", $e);
+	echo "创建日期是 " . date("Y-m-d h:i:sa", $f);
+	echo "创建日期是 " . date("Y-m-d h:i:sa", $g);
+	echo "创建日期是 " . date("Y-m-d h:i:sa", $h);
+?>
+```
+—— Wenlh
