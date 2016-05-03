@@ -27,5 +27,27 @@ tags:
 	require 'filename';
 ```
 
+* 调用文件可以使用引用文件中的变量
+
+```php
+	<?php
+		$color='银色的';
+		$car='奔驰轿车';
+	?>
+```
+
+```php
+<html>
+<body>
+
+<h1>欢迎访问我的首页！</h1>
+<?php
+	include 'vars.php';
+	echo "我有一辆" . $color . $car. "。";		\\我有一辆银色的奔驰轿车。
+?>
+
+</body>
+</html>
+```
 
 —— Wenlh

@@ -88,6 +88,9 @@ friends: [
         title: "W3CSchool-PHP",
         href: "http://www.w3school.com.cn/php/php_superglobals.asp"
     },{
+        title: "phpwtf.org",
+        href: "http://www.phpwtf.org/"
+    },{
         title: "XDITE的博客",
         href: "http://blog.xdite.net/categories/Rails/"
     }
