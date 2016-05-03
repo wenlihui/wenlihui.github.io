@@ -1,0 +1,60 @@
+---
+layout:     post
+title:      "PHP表单"
+subtitle:   " \"PHP基础语法学习记录\""
+date:       2016-04-28 15:00:00
+author:     "Wenlh"
+header-img: "img/myson.jpg"
+catalog: true
+tags:
+    - PHP
+---
+
+## PHP表单学习记录  
+
+### [表单处理](http://www.w3school.com.cn/php/php_forms.asp) 
+
+展示页
+
+```php
+<html>
+  
+  <body>
+    <form action="welcome.php" method="post">
+      Name:
+      <input type="text" name="name">
+      <br>
+      E-mail:
+      <input type="text" name="email">
+      <br>
+      <input type="submit">
+    </form>
+  </body>
+
+</html>
+```
+
+post页-welcome.php,使用$_POST来获取传入参数,如果是GET方法提交,使用$_GET来获取传入参数
+
+```php
+<html>
+  
+  <body>
+    Welcome
+    <?php echo $_POST[ "name"]; ?>
+      <br>
+      Your email address is:
+      <?php echo $_POST[ "email"]; ?>
+  </body>
+
+</html>
+```
+
+输出结果
+
+```php
+Welcome John
+Your email address is john.doe@example.com
+```
+
+—— Wenlh
