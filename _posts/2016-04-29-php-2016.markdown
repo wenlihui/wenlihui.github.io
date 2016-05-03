@@ -14,7 +14,7 @@ tags:
 
 ### [语法](http://www.w3school.com.cn/php/php_syntax.asp) 
 
-*PHP脚本以 <?php 开头，以 ?> 结尾 
+1.PHP脚本以 <?php 开头，以 ?> 结尾 
 
 ```php
     <?php
@@ -23,7 +23,7 @@ tags:
 ```
 2.PHP文件的默认文件扩展名是 ".php" 
 
-*PHP文件通常包含 HTML 标签以及一些 PHP 脚本代码 
+3.PHP文件通常包含 HTML 标签以及一些 PHP 脚本代码 
 
 ```php
     <!DOCTYPE html>
@@ -106,9 +106,9 @@ tags:
 
 ### [输出](http://www.w3school.com.cn/php/php_echo_print.asp)  
 echo 和 print 之间的差异：
-1. echo - 能够输出一个以上的字符串 
-2. print - 只能输出一个字符串，并始终返回 1 
-1. echo 比 print 稍快，因为它不返回任何值 
+* echo - 能够输出一个以上的字符串 
+* print - 只能输出一个字符串，并始终返回 1 
+* echo 比 print 稍快，因为它不返回任何值 
   
 ```php
 	<?php
@@ -200,11 +200,11 @@ echo 和 print 之间的差异：
 ### [字符串函数](http://www.w3school.com.cn/php/php_ref_string.asp)  
 
 * [strlen()](http://www.w3school.com.cn/php/func_string_strlen.asp) 	获取字符串长度
-2. [chop()]((http://www.w3school.com.cn/php/func_string_chop.asp))			从字符串右端移除字符,chop(string,charlist),默认移除全部空白字符
+* [chop()]((http://www.w3school.com.cn/php/func_string_chop.asp))			从字符串右端移除字符,chop(string,charlist),默认移除全部空白字符
 * [chunk_split()](http://www.w3school.com.cn/php/func_string_chunk_split.asp)	分割字符串chunk_split(string,length,end),按长度分割,并在结尾拼接字符串,length及end可选	
 * [explode()](http://www.w3school.com.cn/php/func_string_explode.asp)	把字符串打散为数组explode(separator,string,limit),例:(explode(" ",$str),limit可选	
-4. [implode()](http://www.w3school.com.cn/php/func_string_implode.asp)	函数返回由数组元素组合成的字符串。implode(separator,array),例:implode(" ",$arr)
-5. [join()](http://www.w3school.com.cn/php/func_string_join.asp)	函数是 implode() 函数的别名
+* [implode()](http://www.w3school.com.cn/php/func_string_implode.asp)	函数返回由数组元素组合成的字符串。implode(separator,array),例:implode(" ",$arr)
+* [join()](http://www.w3school.com.cn/php/func_string_join.asp)	函数是 implode() 函数的别名
 * [fprintf()](http://www.w3school.com.cn/php/func_string_fprintf.asp)		函数把格式化的字符串写入指定的输出流（例如：文件或数据库）
 * [lcfirst()](http://www.w3school.com.cn/php/func_string_lcfirst.asp)		函数把字符串中的首字符转换为小写
 * [strtolower()](http://www.w3school.com.cn/php/func_string_strtolower.asp)	把所有字符转换为小写	
@@ -240,7 +240,7 @@ echo 和 print 之间的差异：
 
 ### [常量](http://www.w3school.com.cn/php/php_constants.asp)  
 
-* 常量是单个值的标识符（名称）。在脚本中无法改变该值。
+1. 常量是单个值的标识符（名称）。在脚本中无法改变该值。
 2. 有效的常量名以字符或下划线开头（常量名称前面没有 $ 符号）。
 3. 注释：与变量不同，常量贯穿整个脚本是自动全局的。
 4. 如需设置常量，请使用 define() 函数,三个参数,常量名、常量值、是否大小写敏感(默认false,大小写敏感) 
