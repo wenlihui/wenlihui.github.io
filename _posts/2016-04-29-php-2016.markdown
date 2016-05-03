@@ -106,9 +106,9 @@ tags:
 
 ### [输出](http://www.w3school.com.cn/php/php_echo_print.asp)  
 echo 和 print 之间的差异：
-  echo - 能够输出一个以上的字符串 
-  print - 只能输出一个字符串，并始终返回 1 
-  echo 比 print 稍快，因为它不返回任何值 
+1. echo - 能够输出一个以上的字符串 
+2. print - 只能输出一个字符串，并始终返回 1 
+3. echo 比 print 稍快，因为它不返回任何值 
   
 ```php
 	<?php
@@ -122,4 +122,79 @@ echo 和 print 之间的差异：
 		echo "My car is a {$cars[0]}";
 	?>
 ```
+
+### [数据类型](http://www.w3school.com.cn/php/php_datatypes.asp)  
+
+1. PHP 字符串 
+2. PHP 整数 
+3. PHP 浮点数 
+4. PHP 逻辑 
+5. PHP 数组 
+6. PHP 对象 
+7. PHP NULL 值 
+
+```php
+    <?php
+        $x = 5985;
+        var_dump($x);       //int(5985)
+        $x = -345;          //int(-345)
+        var_dump($x);
+        echo "<br>"; 
+        $x = 0x8C;          // 十六进制数
+        var_dump($x);       //int(140)
+        echo "<br>";
+        $x = 047;           // 八进制数
+        var_dump($x);       //int(39)
+        
+        $x = 10.365;
+        var_dump($x);       //float(10.365)
+        echo "<br>"; 
+        $x = 2.4e3;
+        var_dump($x);       //float(2400)
+        echo "<br>"; 
+        
+        $x=true;
+        $y=false;
+        var_dump($x);       //bool(true)
+        echo "<br>"; 
+        var_dump($y);       //bool(false)
+        
+        $cars=array("Volvo","BMW","SAAB");
+        var_dump($cars);    
+        /*
+        array(3) {
+            [0]=>
+            string(5) "Volvo"
+            [1]=>
+            string(3) "BMW"
+            [2]=>
+            string(4) "SAAB"
+        }
+        */
+        class Car
+            {
+                var $color;
+                function Car($color="green") {
+                    $this->color = $color;
+                }
+                function what_color() {
+                    return $this->color;
+                }
+            }
+            
+        $cars = new car;
+        var_dump($cars);
+        /*
+        object(Car)#1 (1) {
+            ["color"]=>
+            string(5) "green"
+        }
+        */
+        
+        
+        $x=null;
+        var_dump($x);       //NULL
+    ?>
+```
+
 —— Wenlh
