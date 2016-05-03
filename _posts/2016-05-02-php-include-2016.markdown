@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "PHP表单"
+title:      "PHP include"
 subtitle:   " \"PHPinclude学习记录\""
 date:       2016-05-03 8:00:00
 author:     "Wenlh"
@@ -14,10 +14,12 @@ tags:
 
 **通过 include 或 require 语句，可以将 PHP 文件的内容插入另一个 PHP 文件（在服务器执行它之前）**
 **include 和 require 语句是相同的，除了错误处理方面：**
+
 * require 会生成致命错误（E_COMPILE_ERROR）并停止脚本
 * include 只生成警告（E_WARNING），并且脚本会继续
-> 请在此时使用 require：当文件被应用程序请求时。
-> 请在此时使用 include：当文件不是必需的，且应用程序在文件未找到时应该继续运行时。
+
+> * 请在此时使用 require：当文件被应用程序请求时。
+> * 请在此时使用 include：当文件不是必需的，且应用程序在文件未找到时应该继续运行时。
 
 ```php
 	include 'filename';
