@@ -10,3 +10,4 @@ npm-debug.log
 .idea/encodings.xml
 *.xml
 .idea/wenlihui.github.io.iml
+*.bak
