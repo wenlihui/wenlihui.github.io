@@ -237,4 +237,18 @@ echo 和 print 之间的差异：
 1. [substr_count()](http://www.w3school.com.cn/php/func_string_substr_count.asp)	函数计算子串在字符串中出现的次数
 1. [substr_replace()](http://www.w3school.com.cn/php/func_string_substr_replace.asp)	函数把字符串的一部分替换为另一个字符串
 
+
+### [常量](http://www.w3school.com.cn/php/php_constants.asp)  
+
+1. 常量是单个值的标识符（名称）。在脚本中无法改变该值。
+2. 有效的常量名以字符或下划线开头（常量名称前面没有 $ 符号）。
+3. 注释：与变量不同，常量贯穿整个脚本是自动全局的。
+4. 如需设置常量，请使用 define() 函数,三个参数,常量名、常量值、是否大小写敏感(默认false) 
+
+```php
+	<?php
+		define("GREETING", "Welcome to W3School.com.cn!");
+		echo GREETING;
+	?>
+```
 —— Wenlh
