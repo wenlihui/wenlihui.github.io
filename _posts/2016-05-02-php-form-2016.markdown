@@ -16,23 +16,6 @@ tags:
 
 展示页
 
-```php
-<html>
-  
-  <body>
-    <form action="welcome.php" method="post">
-      Name:
-      <input type="text" name="name">
-      <br>
-      E-mail:
-      <input type="text" name="email">
-      <br>
-      <input type="submit">
-    </form>
-  </body>
-
-</html>
-```
 
 post页-welcome.php,使用$_POST来获取传入参数,如果是GET方法提交,使用$_GET来获取传入参数
 
