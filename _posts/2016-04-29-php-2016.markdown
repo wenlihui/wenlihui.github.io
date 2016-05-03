@@ -12,18 +12,18 @@ tags:
 
 ## PHP基本语法学习记录  
 
-### [语法](http://www.w3school.com.cn/php/php_syntax.asp)
+### [语法](http://www.w3school.com.cn/php/php_syntax.asp) 
 
-1.PHP脚本以 <?php 开头，以 ?> 结尾
+1.PHP脚本以 <?php 开头，以 ?> 结尾 
 
 ```php
     <?php
       // 此处是 PHP 代码
     ?>
 ```
-2.PHP文件的默认文件扩展名是 ".php"
+2.PHP文件的默认文件扩展名是 ".php" 
 
-3.PHP文件通常包含 HTML 标签以及一些 PHP 脚本代码
+3.PHP文件通常包含 HTML 标签以及一些 PHP 脚本代码 
 
 ```php
     <!DOCTYPE html>
@@ -37,11 +37,11 @@ tags:
     </html>
 ```
 
-4.PHP语句以分号结尾
+4.PHP语句以分号结尾 
 
-5.PHP中函数、类和关键词大小写不敏感, 变量大小写敏感
+5.PHP中函数、类和关键词大小写不敏感, 变量大小写敏感 
 
-6.PHP中的注释  
+6.PHP中的注释 
 
 ```php
     <?php
@@ -56,4 +56,51 @@ tags:
     ?>
 ```
 
+### [变量](http://www.w3school.com.cn/php/php_variables.asp) 
+
+1.变量规则:  
+    变量以 $ 符号开头，其后是变量的名称  
+    变量名称必须以字母或下划线开头  
+    变量名称不能以数字开头  
+    变量名称只能包含字母数字字符和下划线（A-z、0-9 以及 _）  
+    变量名称对大小写敏感（$y 与 $Y 是两个不同的变量）  
+
+2.PHP 有三种不同的变量作用域： 
+    local（局部） 函数中定义的变量,只能在函数内访问  
+    global（全局）函数外定义的变量,只能在函数外访问  
+    static（静态）函数执行完成后不会删除,与类变量相似      
+
+```php
+    <?php
+        $a = 'a';           //全局变量
+        function my_test(){
+            $b = 'b';       //局部变量
+            static $c = 0;  //静态变量
+            $c++;
+            echo $c;
+        }
+        my_test();          //显示'1'
+        my_test();          //显示'2'
+        my_test();          //显示'3'
+    ?>
+```
+
+3.PHP 通过global关键字实现变量在函数内外互相访问(或使用$GLOBALS['x']形式在函数内访问global的变量) 
+
+```php
+    <?php
+        $a = 5;
+        function my_test(){
+            //echo $a       //不能显示
+            global $a;
+            echo $a;        //输出5
+            global $b;
+            $b = $a + 10;
+            $c = $b;
+        }
+        my_test();
+        echo $b;            //输出15
+        //echo $c;            //不能输出
+    ?>
+```
 —— Wenlh
