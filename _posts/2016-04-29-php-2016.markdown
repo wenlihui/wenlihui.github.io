@@ -214,7 +214,7 @@ echo 和 print 之间的差异：
 1. [ltrim()](http://www.w3school.com.cn/php/func_string_ltrim.asp)		函数移除字符串左侧的空白字符或其他预定义字符
 1. [rtrim()](http://www.w3school.com.cn/php/func_string_rtrim.asp)		函数移除字符串右侧的空白字符或其他预定义字符
 1. [trim()](http://www.w3school.com.cn/php/func_string_trim.asp)		函数移除字符串两侧的空白字符或其他预定义字符
-1. [nl2br()](http://www.w3school.com.cn/php/func_string_nl2br.asp)	函数在字符串中的每个新行（\n）之前插入 HTML 换行符（<br> 或 <br />）。	
+1. [nl2br()](http://www.w3school.com.cn/php/func_string_nl2br.asp)	函数在字符串中的每个新行（\n）之前插入 HTML 换行符（br）。	
 1. [number_format()](http://www.w3school.com.cn/php/func_string_number_format.asp)		函数通过千位分组来格式化数字
 1. [parse_str()](http://www.w3school.com.cn/php/func_string_parse_str.asp)	把查询字符串解析到变量中parse_str(string,array)如果未设置 array 参数，则由该函数设置的变量将覆盖已存在的同名变量	
 1. [str_pad()](http://www.w3school.com.cn/php/func_string_str_pad.asp)	函数把字符串填充为新的长度str_pad(string,length,pad_string,pad_type)	
@@ -243,7 +243,7 @@ echo 和 print 之间的差异：
 1. 常量是单个值的标识符（名称）。在脚本中无法改变该值。
 2. 有效的常量名以字符或下划线开头（常量名称前面没有 $ 符号）。
 3. 注释：与变量不同，常量贯穿整个脚本是自动全局的。
-4. 如需设置常量，请使用 define() 函数,三个参数,常量名、常量值、是否大小写敏感(默认false) 
+4. 如需设置常量，请使用 define() 函数,三个参数,常量名、常量值、是否大小写敏感(默认false,大小写敏感) 
 
 ```php
 	<?php
