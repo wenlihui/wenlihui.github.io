@@ -254,4 +254,208 @@ echo 和 print 之间的差异：
 		echo GREETING;
 	?>
 ```
+
+### [运算符](http://www.w3school.com.cn/php/php_operators.asp)  
+
+##### 算数运算符
+
+运算符|	名称|	例子|	结果
+----|----|----|----
++|	加法|	$x + $y|	$x 与 $y 求和
+-|	减法|	$x - $y|	$x 与 $y 的差数
+*|	乘法|	$x * $y|	$x 与 $y 的乘积
+/|	除法|	$x / $y|	$x 与 $y 的商数
+%|	模数|	$x % $y|	$x 除 $y 的余数
+
+##### 赋值运算符
+
+赋值|	等同于|	描述
+----|----|----
+x = y|	x = y|	右侧表达式为左侧运算数设置值
+x += y|	x = x + y|	加
+x -= y|	x = x - y|	减
+x *= y|	x = x * y|	乘
+x /= y|	x = x / y|	除
+x %= y|	x = x % y|	模数
+
+##### 字符串运算符
+
+运算符|	名称|	例子|	结果
+----|----|----|----
+.|	串接|	$txt1 = "Hello" $txt2 = $txt1 . " world!"|	现在 $txt2 包含 "Hello world!"
+.=|	串接赋值|	$txt1 = "Hello" $txt1 .= " world!"|	现在 $txt1 包含 "Hello world!"
+
+##### 递增/递减运算符
+
+运算符|	名称|	描述
+----|----|----
+++$x|	前递增|	$x 加一递增，然后返回 $x
+$x++|	后递增|	返回 $x，然后 $x 加一递增
+--$x|	前递减|	$x 减一递减，然后返回 $x
+$x--|	后递减|	返回 $x，然后 $x 减一递减
+
+##### 比较运算符
+
+运算符|	名称|	例子|	结果
+----|----|----|----
+==	|等于|	$x == $y|	如果 $x 等于 $y，则返回 true。
+===	|全等|（完全相同）	$x === $y|	如果 $x 等于 $y，且它们类型相同，则返回 true。
+!=	|不等于|	$x != $y|	如果 $x 不等于 $y，则返回 true。
+<>	|不等于|	$x <> $y|	如果 $x 不等于 $y，则返回 true。
+!==	|不全等（完全不同）|	$x !== $y|	如果 $x 不等于 $y，且它们类型不相同，则返回 true。
+>	|大于|	$x > $y|	如果 $x 大于 $y，则返回 true。
+<	|大于|	$x < $y|	如果 $x 小于 $y，则返回 true。
+>=	|大于或等于|	$x >= $y|	如果 $x 大于或者等于 $y，则返回 true.
+<=	|小于或等于|	$x <= $y|	如果 $x 小于或者等于 $y，则返回 true。
+
+##### 逻辑运算符
+
+运算符|	名称|	例子|	结果
+----|----|----|----
+and|	与|	$x and $y|	如果 $x 和 $y 都为 true，则返回 true。
+or|	或|	$x or $y|	如果 $x 和 $y 至少有一个为 true，则返回 true。
+xor|	异或|	$x xor $y|	如果 $x 和 $y 有且仅有一个为 true，则返回 true。
+&&|	与|	$x && $y|	如果 $x 和 $y 都为 true，则返回 true。
+\\|\||	或|	$x \|\| $y|	如果 $x 和 $y 至少有一个为 true，则返回 true。
+!|	非|	!$x|	如果 $x 不为 true，则返回 true。
+
+##### 数组运算符
+
+运算符|	名称|	例子|	结果
+----|----|----|----
++|	联合|	$x + $y|	$x 和 $y 的联合（但不覆盖重复的键）
+==|	相等|	$x == $y|	如果 $x 和 $y 拥有相同的键/值对，则返回 true。
+===|	全等|	$x === $y|	如果 $x 和 $y 拥有相同的键/值对，且顺序相同类型相同，则返回 true。
+!=|	不相等|	$x != $y|	如果 $x 不等于 $y，则返回 true。
+<>|	不相等|	$x <> $y|	如果 $x 不等于 $y，则返回 true。
+!==|	不全等|	$x !== $y|	如果 $x 与 $y 完全不同，则返回 true。
+
+### [条件语句]()  
+
+#### [IF...ELSE...](http://www.w3school.com.cn/php/php_if_else.asp)
+
+```php
+	<?php
+		$t='5';
+	
+		if ($t<"10") {
+	   echo "Have a good morning!";
+		} elseif ($t<"20") {
+	   echo "Have a good day!";
+		} else {
+	   echo "Have a good night!";
+		}
+	?>
+```
+
+#### [Switch](http://www.w3school.com.cn/php/php_switch.asp)
+
+* 对表达式（通常是变量）进行一次计算
+* 把表达式的值与结构中 case 的值进行比较
+* 如果存在匹配，则执行与 case 关联的代码
+* 代码执行后，break 语句阻止代码跳入下一个 case 中继续执行,否则继续判断
+* 如果没有 case 为真，则使用 default 语句
+
+```php
+	<?php
+		switch ($x)
+		{
+			case 1: 
+		  	echo "Number 1"; 
+		  	break; 
+			case 2: 
+		  	echo "Number 2"; 
+		  	break; 
+			case 3: 
+		  	echo "Number 3"; 
+		  	break; 
+			default: 
+		  	echo "No number between 1 and 3"; 
+		}
+	?>
+```
+
+### [循环语句]()  
+
+#### [while、 do...while](http://www.w3school.com.cn/php/php_looping.asp)
+
+```php
+	<?php 
+		$x=1; 
+
+		while($x<=5) {
+  		echo "这个数字是：$x <br>";
+  		$x++;
+		} 
+		
+		do {
+	  	echo "这个数字是：$x <br>";
+	  	$x++;
+		} while ($x<=5);
+	?>
+```
+
+#### [for、 foreach](http://www.w3school.com.cn/php/php_looping_for.asp)
+
+```php
+	<?php 
+		for ($x=0; $x<=10; $x++) {
+		  echo "数字是：$x <br>";
+		} 
+		
+		$colors = array("red","green","blue","yellow"); 
+	
+		foreach ($colors as $value) {
+		  echo "$value <br>";
+		}
+	?>
+```
+
+### [数组](http://www.w3school.com.cn/php/php_arrays.asp)  
+
+* 索引数组 - 带有数字索引的数组
+* 关联数组 - 带有指定键的数组（HASH）
+* 多维数组 - 包含一个或多个数组的数组
+
+```php
+<?php
+	$cars=array("Volvo","BMW","SAAB");
+	$arrlength=count($cars);
+	
+	for($x=0;$x<$arrlength;$x++) {
+	  echo $cars[$x];
+	  echo "<br>";
+	}
+	
+	$age=array("Bill"=>"35","Steve"=>"37","Peter"=>"43");
+
+	foreach($age as $x=>$x_value) {
+	  echo "Key=" . $x . ", Value=" . $x_value;
+	  echo "<br>";
+	}
+?>
+```
+
+### [数组排序](http://www.w3school.com.cn/php/php_arrays_sort.asp)
+
+* sort() - 以升序对数组排序
+* rsort() - 以降序对数组排序
+* asort() - 根据值，以升序对关联数组进行排序
+* ksort() - 根据键，以升序对关联数组进行排序
+* arsort() - 根据值，以降序对关联数组进行排序
+* krsort() - 根据键，以降序对关联数组进行排序
+
+
+### [超全局](http://www.w3school.com.cn/php/php_superglobals.asp)
+
+* $GLOBALS
+* $_SERVER
+* $_REQUEST
+* $_POST
+* $_GET
+* $_FILES
+* $_ENV
+* $_COOKIE
+* $_SESSION
+
 —— Wenlh
