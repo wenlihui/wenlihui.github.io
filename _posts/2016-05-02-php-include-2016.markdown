@@ -16,6 +16,14 @@ tags:
 **include 和 require 语句是相同的，除了错误处理方面：**
 * require 会生成致命错误（E_COMPILE_ERROR）并停止脚本
 * include 只生成警告（E_WARNING），并且脚本会继续
+> 请在此时使用 require：当文件被应用程序请求时。
+> 请在此时使用 include：当文件不是必需的，且应用程序在文件未找到时应该继续运行时。
+
+```php
+	include 'filename';
+	
+	require 'filename';
+```
 
 
 —— Wenlh
