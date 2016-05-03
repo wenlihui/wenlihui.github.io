@@ -14,7 +14,7 @@ tags:
 
 ### [语法](http://www.w3school.com.cn/php/php_syntax.asp) 
 
-1.PHP脚本以 <?php 开头，以 ?> 结尾 
+*PHP脚本以 <?php 开头，以 ?> 结尾 
 
 ```php
     <?php
@@ -23,7 +23,7 @@ tags:
 ```
 2.PHP文件的默认文件扩展名是 ".php" 
 
-1.PHP文件通常包含 HTML 标签以及一些 PHP 脚本代码 
+*PHP文件通常包含 HTML 标签以及一些 PHP 脚本代码 
 
 ```php
     <!DOCTYPE html>
@@ -59,16 +59,16 @@ tags:
 ### [变量](http://www.w3school.com.cn/php/php_variables.asp) 
 
 1.变量规则:  
-    变量以 $ 符号开头，其后是变量的名称  
-    变量名称必须以字母或下划线开头  
-    变量名称不能以数字开头  
-    变量名称只能包含字母数字字符和下划线（A-z、0-9 以及 _）  
-    变量名称对大小写敏感（$y 与 $Y 是两个不同的变量）  
+   * 变量以 $ 符号开头，其后是变量的名称  
+   * 变量名称必须以字母或下划线开头  
+   * 变量名称不能以数字开头  
+   * 变量名称只能包含字母数字字符和下划线（A-z、0-9 以及 _）  
+   * 变量名称对大小写敏感（$y 与 $Y 是两个不同的变量）  
 
 2.PHP 有三种不同的变量作用域： 
-    local（局部） 函数中定义的变量,只能在函数内访问  
-    global（全局）函数外定义的变量,只能在函数外访问  
-    static（静态）函数执行完成后不会删除,与类变量相似      
+   * local（局部） 函数中定义的变量,只能在函数内访问  
+   * global（全局）函数外定义的变量,只能在函数外访问  
+   * static（静态）函数执行完成后不会删除,与类变量相似      
 
 ```php
     <?php
@@ -199,48 +199,48 @@ echo 和 print 之间的差异：
 
 ### [字符串函数](http://www.w3school.com.cn/php/php_ref_string.asp)  
 
-1. [strlen()](http://www.w3school.com.cn/php/func_string_strlen.asp) 	获取字符串长度
+* [strlen()](http://www.w3school.com.cn/php/func_string_strlen.asp) 	获取字符串长度
 2. [chop()]((http://www.w3school.com.cn/php/func_string_chop.asp))			从字符串右端移除字符,chop(string,charlist),默认移除全部空白字符
-1. [chunk_split()](http://www.w3school.com.cn/php/func_string_chunk_split.asp)	分割字符串chunk_split(string,length,end),按长度分割,并在结尾拼接字符串,length及end可选	
-1. [explode()](http://www.w3school.com.cn/php/func_string_explode.asp)	把字符串打散为数组explode(separator,string,limit),例:(explode(" ",$str),limit可选	
+* [chunk_split()](http://www.w3school.com.cn/php/func_string_chunk_split.asp)	分割字符串chunk_split(string,length,end),按长度分割,并在结尾拼接字符串,length及end可选	
+* [explode()](http://www.w3school.com.cn/php/func_string_explode.asp)	把字符串打散为数组explode(separator,string,limit),例:(explode(" ",$str),limit可选	
 4. [implode()](http://www.w3school.com.cn/php/func_string_implode.asp)	函数返回由数组元素组合成的字符串。implode(separator,array),例:implode(" ",$arr)
 5. [join()](http://www.w3school.com.cn/php/func_string_join.asp)	函数是 implode() 函数的别名
-1. [fprintf()](http://www.w3school.com.cn/php/func_string_fprintf.asp)		函数把格式化的字符串写入指定的输出流（例如：文件或数据库）
-1. [lcfirst()](http://www.w3school.com.cn/php/func_string_lcfirst.asp)		函数把字符串中的首字符转换为小写
-1. [strtolower()](http://www.w3school.com.cn/php/func_string_strtolower.asp)	把所有字符转换为小写	
-1. [strtoupper()](http://www.w3school.com.cn/php/func_string_strtoupper.asp)	把所有字符转换为大写
-1. [ucfirst()](http://www.w3school.com.cn/php/func_string_ucfirst.asp)		函数把字符串中的首字符转换为大写
-1. [ucwords()](http://www.w3school.com.cn/php/func_string_ucwords.asp)		函数把字符串中每个单词的首字符转换为大写
-1. [ltrim()](http://www.w3school.com.cn/php/func_string_ltrim.asp)		函数移除字符串左侧的空白字符或其他预定义字符
-1. [rtrim()](http://www.w3school.com.cn/php/func_string_rtrim.asp)		函数移除字符串右侧的空白字符或其他预定义字符
-1. [trim()](http://www.w3school.com.cn/php/func_string_trim.asp)		函数移除字符串两侧的空白字符或其他预定义字符
-1. [nl2br()](http://www.w3school.com.cn/php/func_string_nl2br.asp)	函数在字符串中的每个新行（\n）之前插入 HTML 换行符（br）。	
-1. [number_format()](http://www.w3school.com.cn/php/func_string_number_format.asp)		函数通过千位分组来格式化数字
-1. [parse_str()](http://www.w3school.com.cn/php/func_string_parse_str.asp)	把查询字符串解析到变量中parse_str(string,array)如果未设置 array 参数，则由该函数设置的变量将覆盖已存在的同名变量	
-1. [str_pad()](http://www.w3school.com.cn/php/func_string_str_pad.asp)	函数把字符串填充为新的长度str_pad(string,length,pad_string,pad_type)	
-1. [str_repeat()](http://www.w3school.com.cn/php/func_string_str_repeat.asp)		函数把字符串重复指定的次数
-1. [str_replace()](http://www.w3school.com.cn/php/func_string_str_replace.asp)		函数以其他字符替换字符串中的一些字符（区分大小写）str_replace(find,replace,string,count)
-1. [str_ireplace()](http://www.w3school.com.cn/php/func_string_str_ireplace.asp)		函数替换字符串中的一些字符（不区分大小写）str_replace(find,replace,string,count)
-1. [str_split()](http://www.w3school.com.cn/php/func_string_str_split.asp)	函数把字符串分割到数组中。str_split(string,length)
-1. [str_word_count()](http://www.w3school.com.cn/php/func_string_str_word_count.asp)	函数计算字符串中的单词数
-1. [strip_tags()](http://www.w3school.com.cn/php/func_string_strip_tags.asp)	函数剥去字符串中的 HTML、XML 以及 PHP 的标签.strip_tags(string,allow)
-1. [stripos()](http://www.w3school.com.cn/php/func_string_stripos.asp)	 函数查找字符串在另一字符串中第一次出现的位置(不区分大小写)
-1. [strpos()](http://www.w3school.com.cn/php/func_string_strpos.asp)	函数查找字符串在另一字符串中第一次出现的位置(区分大小写)
-1. [strripos()](http://www.w3school.com.cn/php/func_string_strripos.asp)	函数查找字符串在另一字符串中最后一次出现的位置(不区分大小写)
-1. [strrpos()](http://www.w3school.com.cn/php/func_string_strrpos.asp)	函数查找字符串在另一字符串中最后一次出现的位置(区分大小写)
-1. [strnatcmp()](http://www.w3school.com.cn/php/func_string_strnatcmp.asp)	使用"自然"算法来比较两个字符串（区分大小写）(1,2,10,11,22)
-1. [strnatcasecmp()](http://www.w3school.com.cn/php/func_string_strnatcasecmp.asp)	使用"自然"算法来比较两个字符串（不区分大小写）(1,2,10,11,22)
-1. [strcasecmp()](http://www.w3school.com.cn/php/func_string_strcasecmp.asp)	函数比较两个字符串(大小写不敏感)(1,10,11,2,22)
-1. [strcmp()](http://www.w3school.com.cn/php/func_string_strcmp.asp)	函数比较两个字符串(大小写敏感)(1,10,11,2,22)
-1. [strrev()](http://www.w3school.com.cn/php/func_string_strrev.asp)	函数反转字符串
-1. [substr()](http://www.w3school.com.cn/php/func_string_substr.asp)	函数返回字符串的一部分,substr(string,start,length)
-1. [substr_count()](http://www.w3school.com.cn/php/func_string_substr_count.asp)	函数计算子串在字符串中出现的次数
-1. [substr_replace()](http://www.w3school.com.cn/php/func_string_substr_replace.asp)	函数把字符串的一部分替换为另一个字符串
+* [fprintf()](http://www.w3school.com.cn/php/func_string_fprintf.asp)		函数把格式化的字符串写入指定的输出流（例如：文件或数据库）
+* [lcfirst()](http://www.w3school.com.cn/php/func_string_lcfirst.asp)		函数把字符串中的首字符转换为小写
+* [strtolower()](http://www.w3school.com.cn/php/func_string_strtolower.asp)	把所有字符转换为小写	
+* [strtoupper()](http://www.w3school.com.cn/php/func_string_strtoupper.asp)	把所有字符转换为大写
+* [ucfirst()](http://www.w3school.com.cn/php/func_string_ucfirst.asp)		函数把字符串中的首字符转换为大写
+* [ucwords()](http://www.w3school.com.cn/php/func_string_ucwords.asp)		函数把字符串中每个单词的首字符转换为大写
+* [ltrim()](http://www.w3school.com.cn/php/func_string_ltrim.asp)		函数移除字符串左侧的空白字符或其他预定义字符
+* [rtrim()](http://www.w3school.com.cn/php/func_string_rtrim.asp)		函数移除字符串右侧的空白字符或其他预定义字符
+* [trim()](http://www.w3school.com.cn/php/func_string_trim.asp)		函数移除字符串两侧的空白字符或其他预定义字符
+* [nl2br()](http://www.w3school.com.cn/php/func_string_nl2br.asp)	函数在字符串中的每个新行（\n）之前插入 HTML 换行符（br）。	
+* [number_format()](http://www.w3school.com.cn/php/func_string_number_format.asp)		函数通过千位分组来格式化数字
+* [parse_str()](http://www.w3school.com.cn/php/func_string_parse_str.asp)	把查询字符串解析到变量中parse_str(string,array)如果未设置 array 参数，则由该函数设置的变量将覆盖已存在的同名变量	
+* [str_pad()](http://www.w3school.com.cn/php/func_string_str_pad.asp)	函数把字符串填充为新的长度str_pad(string,length,pad_string,pad_type)	
+* [str_repeat()](http://www.w3school.com.cn/php/func_string_str_repeat.asp)		函数把字符串重复指定的次数
+* [str_replace()](http://www.w3school.com.cn/php/func_string_str_replace.asp)		函数以其他字符替换字符串中的一些字符（区分大小写）str_replace(find,replace,string,count)
+* [str_ireplace()](http://www.w3school.com.cn/php/func_string_str_ireplace.asp)		函数替换字符串中的一些字符（不区分大小写）str_replace(find,replace,string,count)
+* [str_split()](http://www.w3school.com.cn/php/func_string_str_split.asp)	函数把字符串分割到数组中。str_split(string,length)
+* [str_word_count()](http://www.w3school.com.cn/php/func_string_str_word_count.asp)	函数计算字符串中的单词数
+* [strip_tags()](http://www.w3school.com.cn/php/func_string_strip_tags.asp)	函数剥去字符串中的 HTML、XML 以及 PHP 的标签.strip_tags(string,allow)
+* [stripos()](http://www.w3school.com.cn/php/func_string_stripos.asp)	 函数查找字符串在另一字符串中第一次出现的位置(不区分大小写)
+* [strpos()](http://www.w3school.com.cn/php/func_string_strpos.asp)	函数查找字符串在另一字符串中第一次出现的位置(区分大小写)
+* [strripos()](http://www.w3school.com.cn/php/func_string_strripos.asp)	函数查找字符串在另一字符串中最后一次出现的位置(不区分大小写)
+* [strrpos()](http://www.w3school.com.cn/php/func_string_strrpos.asp)	函数查找字符串在另一字符串中最后一次出现的位置(区分大小写)
+* [strnatcmp()](http://www.w3school.com.cn/php/func_string_strnatcmp.asp)	使用"自然"算法来比较两个字符串（区分大小写）(1,2,10,11,22)
+* [strnatcasecmp()](http://www.w3school.com.cn/php/func_string_strnatcasecmp.asp)	使用"自然"算法来比较两个字符串（不区分大小写）(1,2,10,11,22)
+* [strcasecmp()](http://www.w3school.com.cn/php/func_string_strcasecmp.asp)	函数比较两个字符串(大小写不敏感)(1,10,11,2,22)
+* [strcmp()](http://www.w3school.com.cn/php/func_string_strcmp.asp)	函数比较两个字符串(大小写敏感)(1,10,11,2,22)
+* [strrev()](http://www.w3school.com.cn/php/func_string_strrev.asp)	函数反转字符串
+* [substr()](http://www.w3school.com.cn/php/func_string_substr.asp)	函数返回字符串的一部分,substr(string,start,length)
+* [substr_count()](http://www.w3school.com.cn/php/func_string_substr_count.asp)	函数计算子串在字符串中出现的次数
+* [substr_replace()](http://www.w3school.com.cn/php/func_string_substr_replace.asp)	函数把字符串的一部分替换为另一个字符串
 
 
 ### [常量](http://www.w3school.com.cn/php/php_constants.asp)  
 
-1. 常量是单个值的标识符（名称）。在脚本中无法改变该值。
+* 常量是单个值的标识符（名称）。在脚本中无法改变该值。
 2. 有效的常量名以字符或下划线开头（常量名称前面没有 $ 符号）。
 3. 注释：与变量不同，常量贯穿整个脚本是自动全局的。
 4. 如需设置常量，请使用 define() 函数,三个参数,常量名、常量值、是否大小写敏感(默认false,大小写敏感) 
