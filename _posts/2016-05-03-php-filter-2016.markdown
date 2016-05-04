@@ -1,0 +1,185 @@
+---
+layout:     post
+title:      "PHP：过滤"
+subtitle:   " \"PHP：过滤\""
+date:       2016-05-03 8:00:00
+author:     "Wenlh"
+header-img: "img/myson.jpg"
+catalog: true
+tags:
+    - PHP
+---
+
+## [Filter](http://www.w3school.com.cn/php/php_ref_filter.asp)
+
+#### [filter_var()](http://www.w3school.com.cn/php/func_filter_var.asp)：获取一个变量，并进行过滤。
+
+```php
+<?php
+if(!filter_var("someone@example....com", FILTER_VALIDATE_EMAIL))
+ {
+ echo("E-mail is not valid");
+ }
+else
+ {
+ echo("E-mail is valid");
+ }
+ 
+//输出E-mail is not valid    
+?>
+```
+
+#### [filter_var_array()](http://www.w3school.com.cn/php/func_filter_var_array.asp)：获取多项变量，并进行过滤。
+
+```php
+<?php
+$arr = array
+ (
+ "name" => "peter griffin",
+ "age" => "41",
+ "email" => "peter@example.com",
+ );
+
+$filters = array
+ (
+ "name" => array
+  (
+  "filter"=>FILTER_CALLBACK,
+  "flags"=>FILTER_FORCE_ARRAY,
+  "options"=>"ucwords"
+  ),
+ "age" => array
+  (
+  "filter"=>FILTER_VALIDATE_INT,
+  //option中附加验证
+  "options"=>array
+   (
+   "min_range"=>1,
+   "max_range"=>120
+   )
+  ),
+ "email"=> FILTER_VALIDATE_EMAIL,
+ );
+
+print_r(filter_var_array($arr, $filters));
+
+/*
+	输出: Array
+				 (
+				 [name] => Peter Griffin
+				 [age] => 41
+				 [email] => peter@example.com
+				 )
+*/
+?>
+```
+
+#### [filter_input()](http://www.w3school.com.cn/php/func_filter_input.asp)：从脚本外部获取输入，并进行过滤。
+
+* INPUT_GET                          
+* INPUT_POST                         
+* INPUT_COOKIE                       
+* INPUT_ENV                          
+* INPUT_SERVER                       
+* INPUT_SESSION (Not yet implemented)
+* INPUT_REQUEST (Not yet implemented)
+  
+```php
+<?php
+if (!filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL))
+ {
+ echo "E-Mail is not valid";
+ }
+else
+ {
+ echo "E-Mail is valid";
+ }
+ 
+ //输出:E-Mail is valid
+?>
+```
+  
+#### [filter_input_array()](http://www.w3school.com.cn/php/func_filter_input_array.asp)：从脚本外部获取多项输入，并进行过滤。
+
+* INPUT_GET
+* INPUT_POST
+* INPUT_COOKIE
+* INPUT_ENV
+* INPUT_SERVER
+* INPUT_SESSION (Not yet implemented)
+* INPUT_REQUEST (Not yet implemented)
+
+```php
+<?php
+$filters = array
+ (
+ "name" => array
+  (
+  "filter"=>FILTER_CALLBACK,
+  "flags"=>FILTER_FORCE_ARRAY,
+  "options"=>"ucwords"
+  ),
+ "age" => array
+  (
+  "filter"=>FILTER_VALIDATE_INT,
+  //option中附加验证
+  "options"=>array
+   (
+   "min_range"=>1,
+   "max_range"=>120
+   )
+  ),
+ "email"=> FILTER_VALIDATE_EMAIL,
+ );
+print_r(filter_input_array(INPUT_POST, $filters));
+
+/*
+	输出: Array
+				 (
+				 [name] => Peter Griffin
+				 [age] => 41
+				 [email] => peter@example.com
+				 )
+*/
+?>
+```
+
+#### 自定义filter_callback
+
+```php
+<?php
+function convertSpace($string)
+{
+return str_replace("_", " ", $string);
+}
+
+$string = "Peter_is_a_great_guy!";
+
+echo filter_var($string, FILTER_CALLBACK, array("options"=>"convertSpace")); //输出Peter is a great guy!
+?>
+```
+
+#### PHP过滤器
+
+ID 名称|	描述
+----|----
+FILTER_CALLBACK|	调用用户自定义函数来过滤数据。
+FILTER_SANITIZE_STRING|	去除标签，去除或编码特殊字符。
+FILTER_SANITIZE_STRIPPED|	"string" 过滤器的别名。
+FILTER_SANITIZE_ENCODED|	URL-encode 字符串，去除或编码特殊字符。
+FILTER_SANITIZE_SPECIAL_CHARS|	HTML 转义字符 '"<>& 以及 ASCII 值小于 32 的字符。
+FILTER_SANITIZE_EMAIL|	删除所有字符，除了字母、数字以及 !#$%&'*+-/=?^_`{\|}~@.[]
+FILTER_SANITIZE_URL|	删除所有字符，除了字母、数字以及 $-_.+!*'(),{}\|\\^~[]<>#%";/?:@&=
+FILTER_SANITIZE_NUMBER_INT|	删除所有字符，除了数字和 +-
+FILTER_SANITIZE_NUMBER_FLOAT|	删除所有字符，除了数字、+- 以及 .,eE。
+FILTER_SANITIZE_MAGIC_QUOTES|	应用 addslashes()。
+FILTER_UNSAFE_RAW|	不进行任何过滤，去除或编码特殊字符。
+FILTER_VALIDATE_INT|	在指定的范围以整数验证值。
+FILTER_VALIDATE_BOOLEAN|	如果是 "1", "true", "on" 以及 "yes"，则返回 true，如果是 "0", "false", "off", "no" 以及 ""，则返回 false。否则返回 NULL。
+FILTER_VALIDATE_FLOAT|	以浮点数验证值。
+FILTER_VALIDATE_REGEXP|	根据 regexp，兼容 Perl 的正则表达式来验证值。
+FILTER_VALIDATE_URL|	把值作为 URL 来验证。
+FILTER_VALIDATE_EMAIL|	把值作为 e-mail 来验证。
+FILTER_VALIDATE_IP|	把值作为 IP 地址来验证。
+
+—— Wenlh
