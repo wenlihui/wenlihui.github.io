@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "PHP include"
-subtitle:   " \"PHPinclude学习记录\""
+title:      "PHP：include"
+subtitle:   " \"PHP：include\""
 date:       2016-05-03 8:00:00
 author:     "Wenlh"
 header-img: "img/myson.jpg"

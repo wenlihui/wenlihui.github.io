@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "PHP表单"
-subtitle:   " \"PHP表单学习记录\""
+title:      "PHP：表单"
+subtitle:   " \"PHP：表单\""
 date:       2016-05-03 8:00:00
 author:     "Wenlh"
 header-img: "img/myson.jpg"

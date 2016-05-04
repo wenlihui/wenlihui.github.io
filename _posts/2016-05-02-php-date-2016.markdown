@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "PHP日期"
-subtitle:   " \"PHP日期函数学习记录\""
+title:      "PHP：日期函数"
+subtitle:   " \"PHP：日期函数\""
 date:       2016-05-02 15:00:00
 author:     "Wenlh"
 header-img: "img/myson.jpg"
