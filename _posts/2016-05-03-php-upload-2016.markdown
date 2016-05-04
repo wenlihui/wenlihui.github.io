@@ -1,0 +1,95 @@
+---
+layout:     post
+title:      "PHP 文件上传"
+subtitle:   " \"PHP文件上传\""
+date:       2016-05-03 8:00:00
+author:     "Wenlh"
+header-img: "img/myson.jpg"
+catalog: true
+tags:
+    - PHP
+---
+
+## [文件上传](http://www.w3school.com.cn/php/php_file_upload.asp)  
+
+#### 上传页面html
+
+```html
+<html>
+  
+  <body>
+    <form action="upload_file.php" method="post" enctype="multipart/form-data">
+      <label for="file">
+        Filename:
+      </label>
+      <input type="file" name="file" id="file" />
+      <br />
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+  </body>
+
+</html>
+```
+
+#### 获取文件相关信息
+
+"upload_file.php" 文件含有供上传文件的代码,使用** $_FILES ** 获取上传文件信息  
+
+- $_FILES["file"]["name"] - 被上传文件的名称
+- $_FILES["file"]["type"] - 被上传文件的类型
+- $_FILES["file"]["size"] - 被上传文件的大小，以字节计
+- $_FILES["file"]["tmp_name"] - 存储在服务器的文件的临时副本的名称
+- $_FILES["file"]["error"] - 由文件上传导致的错误代码
+
+#### 上传文件限制
+
+- 下面的代码限制了用户只能上传 .gif 或 .jpeg 文件，文件大小必须小于 20 kb
+> 注：对于 IE，识别 jpg 文件的类型必须是 pjpeg，对于 FireFox，必须是 jpeg
+
+
+#### 保存被上传的文件
+上面的例子在服务器的 PHP 临时文件夹创建了一个被上传文件的临时副本。这个临时的文件会在脚本结束时消失。要保存被上传的文件，我们需要把它拷贝到另外的位置
+
+```php
+<?php
+
+//if语句中限制了文件类型为.JPEG或gif的文件,且文件大小不能超过20kb
+if ((($_FILES["file"]["type"] == "image/gif")
+|| ($_FILES["file"]["type"] == "image/jpeg")
+|| ($_FILES["file"]["type"] == "image/pjpeg"))
+&& ($_FILES["file"]["size"] < 20000))
+  {
+  //判断上传文件是否存在错误
+  if ($_FILES["file"]["error"] > 0)
+    {
+    echo "Return Code: " . $_FILES["file"]["error"] . "<br />";
+    }
+  else
+    {
+    //输出上传文件名,文件类型,文件大小,临时文件名
+    echo "Upload: " . $_FILES["file"]["name"] . "<br />";
+    echo "Type: " . $_FILES["file"]["type"] . "<br />";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
+    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";
+
+		//判断文件在upload文件夹中是否存在,如果不存在将临时文件复制到upload文件夹中,且改名为原文件名
+    if (file_exists("upload/" . $_FILES["file"]["name"]))
+      {
+      echo $_FILES["file"]["name"] . " already exists. ";
+      }
+    else
+      {
+      move_uploaded_file($_FILES["file"]["tmp_name"],
+      "upload/" . $_FILES["file"]["name"]);
+      echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+      }
+    }
+  }
+else
+  {
+  echo "Invalid file";
+  }
+?>
+```
+
+—— Wenlh
