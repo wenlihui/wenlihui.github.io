@@ -91,6 +91,9 @@ friends: [
         title: "phpwtf.org",
         href: "http://www.phpwtf.org/"
     },{
+        title: "PHP-Note",
+        href: "http://www.php-note.com/"
+    },{
         title: "XDITE的博客",
         href: "http://blog.xdite.net/categories/Rails/"
     }
