@@ -1,0 +1,57 @@
+---
+layout:     post
+title:      "PHP：异常处理"
+subtitle:   " \"PHP：异常处理\""
+date:       2016-05-03 8:00:00
+author:     "Wenlh"
+header-img: "img/myson.jpg"
+catalog: true
+tags:
+    - PHP
+---
+
+## [Exception](http://www.w3school.com.cn/php/php_exception.asp)
+
+#### try, catch, throw
+
+* Try - 使用异常的函数应该位于 "try" 代码块内。如果没有触发异常，则代码将照常继续执行。但是如果异常被触发，会抛出一个异常。
+* Throw - 这里规定如何触发异常。每一个 "throw" 必须对应至少一个 "catch"
+* Catch - "catch" 代码块会捕获异常，并创建一个包含异常信息的对象
+
+```php
+<?php
+
+//自定义一个异常类型customException,继承自Exception
+class customException extends Exception {
+    public function errorMessage() {
+        //error message
+        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile() . ': <b>' . $this->getMessage() . '</b> is not a valid E-Mail address';
+        return $errorMsg;
+    }
+}
+$email = "someone@example.com";
+try {
+    //进行检查
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === FALSE) {
+        //throw抛出自定义异常
+        throw new customException($email);
+    }
+    //check for "example" in mail address
+    if (strpos($email, "example") !== FALSE) {
+    		//throw抛出异常
+        throw new Exception("$email is an example e-mail");
+    }
+}
+//捕获自定义异常,输出异常信息
+catch(customException $e) {
+    echo $e->errorMessage();
+}
+//捕获异常输出信息
+catch(Exception $e) {
+    echo $e->getMessage();
+}
+?>
+
+```
+
+—— Wenlh
