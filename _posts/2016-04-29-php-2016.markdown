@@ -468,13 +468,16 @@ xor|	异或|	$x xor $y|	如果 $x 和 $y 有且仅有一个为 true，则返回 
 
 ```php
 <?php
-	function setHeight($name,$age=30) {
+	function setAge($name,$age=30) {
 	  echo "The name is : $name, the age is $age <br>";
 	}
 	
-	setHeight('wenlh',25);		//The name is : wenlh, the age is 25
+	setAge('wenlh',25);		//The name is : wenlh, the age is 25
 	//setHeight(); 						//报错
-	setHeight('wenlh');				//The name is : wenlh, the age is 30
+	setAge('wenlh');				//The name is : wenlh, the age is 30
+	
+	$a = 'setAge';
+	$a('wenlh',60);				//另一种调用方法:wenlh, the age is 60
 ?>
 ```
 
