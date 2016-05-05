@@ -8,6 +8,7 @@ header-img: "img/myson.jpg"
 catalog: true
 tags:
     - PHP
+    - PHP基础
 ---
 
 ## PHP开发程序应该注意的42个优化准则

@@ -8,6 +8,7 @@ header-img: "img/myson.jpg"
 catalog: true
 tags:
     - PHP
+    - PHP基础
 ---
 
 ## [数组函数](http://www.php-note.com/article/detail/550)  

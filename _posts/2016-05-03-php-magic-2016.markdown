@@ -8,6 +8,7 @@ header-img: "img/myson.jpg"
 catalog: true
 tags:
     - PHP
+    - PHP基础
 ---
 
 ## [魔术方法](http://php.net/manual/zh/language.oop5.magic.php)  

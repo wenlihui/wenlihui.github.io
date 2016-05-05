@@ -8,6 +8,7 @@ header-img: "img/myson.jpg"
 catalog: true
 tags:
     - PHP
+    - PHP基础
 ---
 
 ## [引用](http://www.w3school.com.cn/php/php_file_upload.asp)  

@@ -8,6 +8,7 @@ header-img: "img/myson.jpg"
 catalog: true
 tags:
     - PHP
+    - PHP基础
 ---
 
 ## cookies & sessions
