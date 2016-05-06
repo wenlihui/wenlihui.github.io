@@ -380,6 +380,9 @@ xor|	异或|	$x xor $y|	如果 $x 和 $y 有且仅有一个为 true，则返回 
 
 #### [while、 do...while](http://www.w3school.com.cn/php/php_looping.asp)
 
+- 使用break来跳出循环.
+- 使用continue来跳过后续代码
+
 ```php
 	<?php 
 		$x=1; 
