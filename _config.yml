@@ -85,6 +85,9 @@ friends: [
         title: "RubyChina",
         href: "https://ruby-china.org/"
     },{
+        title: "YII常用调用",
+        href: "http://blog.csdn.net/xinqingch/article/details/8186745"
+    },{
         title: "W3CSchool-PHP",
         href: "http://www.w3school.com.cn/php/php_superglobals.asp"
     },{
